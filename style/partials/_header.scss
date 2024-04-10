@@ -1,0 +1,25 @@
+.col-header {
+    font-weight: 700;
+    color: white;
+}
+
+.header {
+    background-color: orange;
+    /* position: fixed;
+    width: 100%; */
+}
+
+.row,
+.header {
+    align-items: center;
+    justify-content: space-around;
+}
+
+.col-4 {
+    width: calc(4 * 100% / 12);
+}
+
+.card-header {
+    position: relative;
+    display: block;
+}
