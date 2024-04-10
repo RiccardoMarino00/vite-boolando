@@ -5,14 +5,22 @@
 
 .header {
     background-color: orange;
-    /* position: fixed;
-    width: 100%; */
+    margin-bottom: 30px;
+    padding-top: 2px;
 }
 
 .row,
 .header {
     align-items: center;
     justify-content: space-around;
+}
+
+.genr {
+    margin: 5px
+}
+
+.titolo {
+    margin-right: 110px;
 }
 
 .col-4 {
