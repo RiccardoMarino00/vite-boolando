@@ -15,7 +15,7 @@ export default {
   components:{
     headerBoo,
     mainBoo,
-    footerBoo
+    footerBoo,
   }
 }
 </script>
