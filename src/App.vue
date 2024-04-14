@@ -2,12 +2,26 @@
 import headerBoo from './components/Header.vue';
 import mainBoo from './components/Main.vue';
 import footerBoo from './components/Footer.vue';
+import axios from 'axios'
+import {store} from './store.js'
 
 export default {
   data(){
     return{
       message: 'ciao'
     }
+  },
+  methods: {
+    fetchProducts(){
+      axios.get('http://localhost:3000/products').then((res) => {
+        console.log(res.data)
+        store.products = res.data
+      })
+    }
+
+  },
+  created (){
+    this.fetchProducts()
   },
   mounted(){
     console.log('mounted')

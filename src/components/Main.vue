@@ -1,10 +1,12 @@
 <script>
-import dataCard from '../assets/db.json'
+// import dataCard from '/ProgettiBoolean/vite-boolando/db.json'
 import card from './CardMain.vue'
+import {store} from '../store'
 export default {
     data(){
         return {
-            products: dataCard.products
+            // products: dataCard.products,
+            store,
          }
     },
     
@@ -20,30 +22,22 @@ export default {
         <section class="main">
             <div class="container">
                 <div class="row">
-                    <div class="col-4" v-for="(product, i) in products" :key="i">
+                    <div class="col-4" v-for="(product, i) in store.products" :key="i">
                       <card :product="product"/>
-                        <!-- <div class="card">
-                            <div class="card-header">
-                                <img :src="product.frontImage" alt="">
-                                <ul >
-                                    <li v-for="(badge, i) in product.badges" :class="`badge--${badge.type}`" :key="i">{{ badge.value }}</li>
-                                </ul>
-                                
-                                <span class="cuore">&hearts;</span>
-                                <img class="overlay " :src="product.backImage"></img>
-                            </div>
-                            <div class="card-body">
-                                <p class="littlegray">{{ product.brand }}</p>
-                                <h3>{{ product.name }}</h3>
-                                <p>
-                                    <span class="prize-red">&euro;</span>
-                                    <span class="text-line">{{product.price}}&euro;</span>
-                                </p>
-                            </div>
-                        </div> -->
                     </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-                        <!-- <card/> -->
+</template> 
+
+
+
+
+
+
+                <!-- <card/> -->
                     <!-- <div class="col-4">
                         <div class="card">
                             <div class="card-header">
@@ -60,9 +54,3 @@ export default {
                             </div>
                         </div>
                     </div> -->
-                </div>
-            </div>
-        </section>
-    </main>
-
-</template>

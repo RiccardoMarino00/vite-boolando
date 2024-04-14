@@ -31,7 +31,7 @@ export default {
                           <span class="genr" v-for="(genere, i) in menu" :key="i">{{ genere.text }}</span>
                       </div>
                       <div class="col-header titolo">
-                          <img src="/public/boolean-logo.png" alt="Logo boolean" width="150px">
+                          <img src="/boolean-logo.png" alt="Logo boolean" width="150px">
                       </div>
                       <div class="col-header">
                           Profilo
