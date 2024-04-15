@@ -1,9 +1,11 @@
 <script>
 import badge from './BadgeCard.vue'
+import modal from './ModalCard.vue'
 export default{
   props: ['product'],
   components: {
     badge,
+    modal,
   }
 }
     
@@ -26,13 +28,14 @@ export default{
                             </div>
                             <div class="card-body">
                                 <p class="littlegray">{{ product.brand }}</p>
-                                <h3>{{ product.name }}</h3>
+                                <h3 @click.stop="$emit ('showProduct')">{{ product.name }}</h3>
                                 <p>
                                     <span class="prize-red">&euro;</span>
                                     <span class="text-line">{{product.price}}&euro;</span>
                                 </p>
                             </div>
                         </div>
+                        
 
 </template>
 
